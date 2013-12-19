@@ -1,4 +1,4 @@
 bullgrid
 ========
 
-The best grid you will every use. 
+The best grid you will ever use. 

@@ -6,7 +6,6 @@
  *
  *
  * @TODO [TimPietrusky] - center vertically / center horizontally 
- * @TODO [TimPietrusky] - Add breakpoint mixin to the project
  *
  *
  */
@@ -397,10 +396,9 @@ $bullgrid-default-spacing: 1em;
 
 
 
+
 /**
- *
- * @TODO [TimPietruky] - Do we really need this?
- * 
+ * Create the grids for the default view. 
  */
 @include grid-setup();
 
@@ -409,20 +407,27 @@ $bullgrid-default-spacing: 1em;
 
 
 /**
- * Create the grids for different devices.
+ * Create the grids for different viewport sizes. 
+ *
+ * Use this with the breakpoint mixin provided or you your own
  */
-@include breakpoint(large){
-  @include grid-setup("large-");
-}
+// @include breakpoint(large) {
+//   @include grid-setup("large-");
+// }
 
-@include breakpoint(medium){
-  @include grid-setup("medium-");
-}
+// @include breakpoint(medium) {
+//   @include grid-setup("medium-");
+// }
 
-@include breakpoint(small){
-  @include grid-setup("small-");
-}
+// @include breakpoint(small) {
+//   @include grid-setup("small-");
+// }
 
-@include breakpoint(ultralarge) {
-  @include grid-setup("ultralarge-");
+@for $i from 1 through length($all-breakpoints) {
+  $current-breakpoint: nth($all-breakpoints, $i);
+  $current-breakpoint-name: nth($current-breakpoint, 1);
+
+  @include breakpoint($current-breakpoint-name) {
+    @include gird-setup(#{$current-breakpoint-name}-);
+  }
 }

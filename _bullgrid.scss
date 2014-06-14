@@ -125,6 +125,17 @@ $bullgrid-default-spacing: 1em;
 
 
 /**
+ * Remove the spacing of the grid-wrapper. 
+ */
+.gw--no-spacing {
+  margin-left: 0;
+}
+
+
+
+
+
+/**
  * Grid
  *
  */

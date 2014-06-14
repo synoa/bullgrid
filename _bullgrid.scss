@@ -78,10 +78,6 @@ $bullgrid-default-spacing: 1em;
    */
   margin-left: -$bullgrid-default-spacing;
     
-  @include breakpoint(medium) {
-    margin-left: -$bullgrid-default-spacing / 2;
-  }
-
   /**
    * The following declarations allow us to use the `.gw` class on lists.
    */

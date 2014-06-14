@@ -165,6 +165,25 @@ $bullgrid-default-spacing: 1em;
  *
  */
 @mixin grid-setup($namespace: "") {
+
+  /*
+   * Float
+   */
+  .#{$namespace}float-left { 
+    float: left; 
+  }
+
+  .#{$namespace}float-right { 
+    float: left; 
+  }
+
+  .#{$namespace}clear { 
+    clear: both; 
+  }
+
+
+
+
   
   /*
    * Hidden

@@ -142,10 +142,6 @@ $bullgrid-default-spacing: 1em;
 .g {
   float: left;
   padding-left: $bullgrid-default-spacing;
-
-  @include breakpoint(medium) {
-    padding-left: $bullgrid-default-spacing / 2;
-  }
 }
 
 

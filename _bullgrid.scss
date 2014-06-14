@@ -3,48 +3,16 @@
  * bullgrid
  *
  * A grid based on the ideas of inuit.css gridsystem. 
- *
- *
- * @TODO [TimPietrusky] - center vertically / center horizontally 
- *
+ * https://github.com/synoa/bullgrid
  *
  */
 
-
-/**
- * Fluid and nestable grid system, e.g.:
- *
-   <div class="gw">
-
-     <div class="g one-third">
-       <p>One third grid</p>
-     </div>
-
-     <div class="g two-thirds">
-       <p>Two thirds grid</p>
-     </div>
-
-     <div class="g one-half">
-       <p>One half grid</p>
-     </div>
-
-     <div class="g one-quarter">
-       <p>One quarter grid</p>
-     </div>
-
-     <div class="g one-quarter">
-       <p>One quarter grid</p>
-     </div>
-
-   </div>
-
-   */
-
-
-/**
- * Default spacing 
- */
+ /**
+  * Default spacing 
+  */
 $bullgrid-default-spacing: 1em;
+
+
 
 
 

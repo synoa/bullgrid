@@ -91,13 +91,13 @@ $bullgrid-default-spacing: 1em;
 /**
  * Reverse grid order
  *
-   <div class="gw  gw--rev">
+   <div class="gw gw--rev">
 
-     <div class="g  one-third">
+     <div class="g one-third">
        <p>Appears on the right</p>
      </div>
 
-     <div class="g  two-thirds">
+     <div class="g two-thirds">
        <p>Appears on the left</p>
      </div>
 
@@ -411,23 +411,26 @@ $bullgrid-default-spacing: 1em;
  *
  * Use this with the breakpoint mixin provided or you your own
  */
+
+//
+// Auto generate the code based on the list of breakpoints
+//
+// @for $i from 1 through length($all-breakpoints) {
+//   $current-breakpoint: nth($all-breakpoints, $i);
+//   $current-breakpoint-name: nth($current-breakpoint, 1);
+//
+//   @include breakpoint($current-breakpoint-name) {
+//     @include grid-setup(#{$current-breakpoint-name}-);
+//   }
+// }
+
+//
+// Declared manually
+//
 // @include breakpoint(large) {
 //   @include grid-setup("large-");
 // }
-
+//
 // @include breakpoint(medium) {
 //   @include grid-setup("medium-");
 // }
-
-// @include breakpoint(small) {
-//   @include grid-setup("small-");
-// }
-
-@for $i from 1 through length($all-breakpoints) {
-  $current-breakpoint: nth($all-breakpoints, $i);
-  $current-breakpoint-name: nth($current-breakpoint, 1);
-
-  @include breakpoint($current-breakpoint-name) {
-    @include gird-setup(#{$current-breakpoint-name}-);
-  }
-}

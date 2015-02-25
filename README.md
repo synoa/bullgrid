@@ -6,6 +6,17 @@ Development Version: 1.0
 The best grid you will ever use. Standalone, modified version of [Harry Robert's](http://csswizardry.com/) [inuit.css
 Grids](https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss). 
 
+## Installation
+
+You can install bullgrid by cloning the latest version from Github (
+[master](https://github.com/synoa/bullgrid) or
+[development](https://github.com/synoa/bullgrid/tree/development)) or by
+installing it via bower. The bower version is always the latest tagged version.
+
+```cmd
+$ bower install bullgrid --save
+```
+
 ## Usage
 
 ### Include the Grid

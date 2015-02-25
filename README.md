@@ -32,6 +32,16 @@ grid using your own breakpoint mixin include it into the file. Then call the
 `grid-setup()` function with your own breakpoint mixin - or leave it out if you
 don't want to use breakpoints at all. 
 
+With the default `_breakpoint.scss` it is adviced to use the second parameter,
+`and up|and down` when creating the grid, e.g.
+
+```
+@include grid-setup('large', 'and down');
+```
+
+This way the breakpoints smoothly transition into each other, which is in most
+cases the behavior one wants.
+
 #### `grid-setup`
 
 The `grid-setup` function creates the markup for all grids. You can pass in a

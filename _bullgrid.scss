@@ -4,7 +4,8 @@
  *
  * A grid based on the ideas of inuit.css gridsystem. 
  * https://github.com/synoa/bullgrid
- *
+ * 
+ * v 0.1
  */
 
  /**
@@ -12,7 +13,16 @@
   */
 $bullgrid-default-spacing: 1em;
 
+/*
+ * To work correctly Bullgrid needs
+ * box-sizing: border-box; to be set.
+ */
 
+.gw, .g {
+  -webkit-box-sizing: border-box; /* <= iOS4, Android <= 2.3 */
+  -moz-box-sizing: border-box; /* Firefox <= 28 */ 
+  box-sizing: border-box;  /* default, modern way */
+}
 
 
 
@@ -141,7 +151,7 @@ $bullgrid-default-spacing: 1em;
   }
 
   .#{$namespace}float-right { 
-    float: left; 
+    float: right; 
   }
 
   .#{$namespace}clear { 
@@ -382,15 +392,15 @@ $bullgrid-default-spacing: 1em;
 
 //
 // Auto generate the code based on the list of breakpoints
-//
-// @for $i from 1 through length($all-breakpoints) {
-//   $current-breakpoint: nth($all-breakpoints, $i);
-//   $current-breakpoint-name: nth($current-breakpoint, 1);
-//
-//   @include breakpoint($current-breakpoint-name) {
-//     @include grid-setup(#{$current-breakpoint-name}-);
-//   }
-// }
+
+ @for $i from 1 through length($all-breakpoints) {
+   $current-breakpoint: nth($all-breakpoints, $i);
+   $current-breakpoint-name: nth($current-breakpoint, 1);
+
+   @include breakpoint($current-breakpoint-name) {
+     @include grid-setup('#{$current-breakpoint-name}-');
+   }
+ }
 
 //
 // Declared manually
@@ -402,3 +412,11 @@ $bullgrid-default-spacing: 1em;
 // @include breakpoint(medium) {
 //   @include grid-setup("medium-");
 // }
+//
+// It is also possible to create print-specific styles using
+// the `@media print` query and a `print-` prefixed namespace.
+// 
+// @media print {
+//   @include grid-setup("print-");
+// }
+//

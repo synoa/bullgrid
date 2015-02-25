@@ -4,7 +4,8 @@
  *
  * A grid based on the ideas of inuit.css gridsystem. 
  * https://github.com/synoa/bullgrid
- *
+ * 
+ * v 0.1
  */
 
  /**
@@ -411,3 +412,11 @@ $bullgrid-default-spacing: 1em;
 // @include breakpoint(medium) {
 //   @include grid-setup("medium-");
 // }
+//
+// It is also possible to create print-specific styles using
+// the `@media print` query and a `print-` prefixed namespace.
+// 
+// @media print {
+//   @include grid-setup("print-");
+// }
+//

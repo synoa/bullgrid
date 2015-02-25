@@ -4,12 +4,12 @@
 // List of all breakpoints, and their minimum width
 // Human names can be changed, they will be used for $breakpoint param on breakpoint mixin
 $all-breakpoints: (
-  ('enormous-', 110em),
-  ('huge-', 75em),
-  ('large-', 60em),
-  ('medium-', 45em),
-  ('small-', 30em),
-  ('tiny-') // Last value should not have a value, it's min value will essentially be 0
+  ('enormous', 110em),
+  ('huge', 75em),
+  ('large', 60em),
+  ('medium', 45em),
+  ('small', 30em),
+  ('tiny') // Last value should not have a value, it's min value will essentially be 0
 );
 
 // Used to determine max value, should be approximately 1px (if not exactly 1px)

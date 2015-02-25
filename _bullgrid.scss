@@ -391,15 +391,15 @@ $bullgrid-default-spacing: 1em;
 
 //
 // Auto generate the code based on the list of breakpoints
-//
-// @for $i from 1 through length($all-breakpoints) {
-//   $current-breakpoint: nth($all-breakpoints, $i);
-//   $current-breakpoint-name: nth($current-breakpoint, 1);
-//
-//   @include breakpoint($current-breakpoint-name) {
-//     @include grid-setup(#{$current-breakpoint-name}-);
-//   }
-// }
+
+ @for $i from 1 through length($all-breakpoints) {
+   $current-breakpoint: nth($all-breakpoints, $i);
+   $current-breakpoint-name: nth($current-breakpoint, 1);
+
+   @include breakpoint($current-breakpoint-name) {
+     @include grid-setup('#{$current-breakpoint-name}-');
+   }
+ }
 
 //
 // Declared manually

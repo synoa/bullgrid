@@ -1,5 +1,8 @@
 # bullgrid
 
+Stable Version: 1.0
+Development Version: 1.0
+
 The best grid you will ever use. Standalone, modified version of [Harry Robert's](http://csswizardry.com/) [inuit.css
 Grids](https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss). 
 

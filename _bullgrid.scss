@@ -12,7 +12,16 @@
   */
 $bullgrid-default-spacing: 1em;
 
+/*
+ * To work correctly Bullgrid needs
+ * box-sizing: border-box; to be set.
+ */
 
+.gw, .g {
+  -webkit-box-sizing: border-box; /* <= iOS4, Android <= 2.3 */
+  -moz-box-sizing: border-box; /* Firefox <= 28 */ 
+  box-sizing: border-box;  /* default, modern way */
+}
 
 
 
@@ -141,7 +150,7 @@ $bullgrid-default-spacing: 1em;
   }
 
   .#{$namespace}float-right { 
-    float: left; 
+    float: right; 
   }
 
   .#{$namespace}clear { 
